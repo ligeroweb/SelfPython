@@ -2,4 +2,21 @@ language: python
 python:
         - "3.6"
 script:
-        - python tictactoe.py
+        - python tictactoe.pylanguage: python
+python:
+        - "3.4"
+        - "3.6"
+        - "3.7"
+        - "3.7-dev"
+
+script:
+        - tictactoe.py
+before_script:
+        - sudo pip install jupyter
+install:
+        - pip install -r requirements.txt
+        - pip install .
+        - pip install ipython
+        - pip install jupyter
+
+
